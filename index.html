@@ -11,37 +11,51 @@
 </head>
 
 <body>
-  <header>
-    <ul>
-      <li onclick="display('intro')">Introduksjon</li>
-      <li onclick="display('oversikt')">Oversikt</li>
-      <li onclick="display('detaljer')">Detaljer</li>
-      <li onclick="dispaly('sammen')">Sammenlign</li>
-    </ul>
-  </header>
-  <main>
-
-    <div id='intro' >Her kan du undersøke kommune data</div>
-    <div id='oversikt'>Lorum ipsum</div>
-    <div id='detaljer'>Lorum ipsum
-      <form onsubmit="detaljerKommune()">
-        <input type="text" name="kName" placeholder="Kommunenummer">
-        <input type="submit" value="Se detaljer!">
-      </form>
-      <div id='kommune_info'>
+  <div id="wrapper">
+    <header>
+      <ul>
+        <li onclick="display('intro')">Introduksjon</li>
+        <li onclick="display('oversikt')">Oversikt</li>
+        <li onclick="display('detaljer')">Detaljer</li>
+        <li onclick="dispaly('sammen')">Sammenlign</li>
+      </ul>
+    </header>
+    <main>
+      <div id='intro'>
+        <div id='intro_blokk'>
+          <h1>Introduksjon</h1>
+          <div id='intro_text'>
+            <p>Her kan du få litt statistikk du</p>
+            <p>Introduksjonsteksten skal bestå av tekst som beskriv produktet deira.
+              Det skal òg innehalda
+              lenkjer til SSB-sine offisielle sider, og ein notis om at dataa kan
+              innehalda feil.</p>
+          </div>
+          <img id="intro_logo" src="Images/ssb_logo.png" alt="ssb logo">
+          <img id="intro_kommune" src="Images/selje_kommune.png" alt="selje kommunevåpen">
+        </div>
 
       </div>
-      <div id="kommune_detaljer">
+      <div id='oversikt'>Lorum ipsum</div>
+      <div id='detaljer'>Lorum ipsum
+        <form onsubmit="detaljerKommune()">
+          <input type="text" name="kName" placeholder="Kommunenummer">
+          <input type="submit" value="Se detaljer!">
+        </form>
+        <div id='kommune_info'>
 
+        </div>
+        <div id="kommune_detaljer">
+
+        </div>
       </div>
-    </div>
-    </div>
-    <div id='sammen'>Lorum ipsum</div>
+      <div id='sammen'>Lorum ipsum</div>
 
-  </main>
-  <footer>
-    <div>Lorum ipsum</div>
-  </footer>
+    </main>
+    <footer>
+      <div>Dette er ein oppgavebesvarelse i emnet INFO134. </div>
+    </footer>
+  </div>
 </body>
 
 </html>
