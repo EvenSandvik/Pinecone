@@ -1,39 +1,47 @@
 <!DOCTYPE HTML>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link href="CSS/main.css" rel="stylesheet">
-    <link href="CSS/index.css" rel="stylesheet">
-    <!–– Font from google API's-->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-  </head>
-  <body>
-      <header>
-        <ul>
-          <li onclick="display('intro')">Introduksjon</li>
-          <li onclick="display('oversikt')">Oversikt</li>
-          <li onclick="display('detaljer')">Detaljer</li>
-          <li onclick="dipaly('sammen')">Sammenlign</li>
-        </ul>
-      </header>
-      <main>
-          <div id='intro'></div>
-          <div id='oversikt'></div>
-          <div id='detaljer'>
-            <form onsubmit="detaljerKommune()">
-              <input type="text" name="kName" placeholder="Kommunenummer">
-              <input type="submit" value="Se detaljer!">
-            </form>
-            <div id='kommune_info'>
+<head>
+  <meta charset="utf-8">
+  <link href="CSS/main.css" rel="stylesheet">
+  <link href="CSS/index.css" rel="stylesheet">
+  <!–– Font from google API's-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-            </div>
-            <div id="kommune_detaljer">
+</head>
 
-            </div>
-          </div>
-          <div id='sammen'></div>
-      </main>
-      <footer></footer>
-  </body>
+<body>
+  <header>
+    <ul>
+      <li onclick="display('intro')">Introduksjon</li>
+      <li onclick="display('oversikt')">Oversikt</li>
+      <li onclick="display('detaljer')">Detaljer</li>
+      <li onclick="dipaly('sammen')">Sammenlign</li>
+    </ul>
+  </header>
+  <main>
+
+    <div id='intro'>Lorum ipsum</div>
+    <div id='oversikt'>Lorum ipsum</div>
+    <div id='detaljer'>Lorum ipsum
+      <form onsubmit="detaljerKommune()">
+        <input type="text" name="kName" placeholder="Kommunenummer">
+        <input type="submit" value="Se detaljer!">
+      </form>
+      <div id='kommune_info'>
+
+      </div>
+      <div id="kommune_detaljer">
+
+      </div>
+    </div>
+    </div>
+    <div id='sammen'>Lorum ipsum</div>
+
+  </main>
+  <footer>
+    <div>Lorum ipsum</div>
+  </footer>
+</body>
+
 </html>
