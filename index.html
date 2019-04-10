@@ -20,7 +20,18 @@
       <main>
           <div id='intro'></div>
           <div id='oversikt'></div>
-          <div id='detaljer'></div>
+          <div id='detaljer'>
+            <form onsubmit="detaljerKommune()">
+              <input type="text" name="kName" placeholder="Kommunenummer">
+              <input type="submit" value="Se detaljer!">
+            </form>
+            <div id='kommune_info'>
+
+            </div>
+            <div id="kommune_detaljer">
+
+            </div>
+          </div>
           <div id='sammen'></div>
       </main>
       <footer></footer>
