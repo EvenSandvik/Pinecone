@@ -4,13 +4,22 @@ function Data(fileid){
     this.onload = null;
 
     this.getNames = function(){
-
+      return Object.keys(this.data.elementer);
     };
     this.getIDs = function(){
-
+      var ret = [];
+      for(var i in this.data.elementer){
+        ret.push(this.data.elementer[i].kommunenummer);
+      }
+      return ret;
     };
     this.getInfo = function(){
-
+      for(var i in this.data.elementer){
+        if(this.data.elementer[i].kommunenummer === knum){
+          return this.data.elementer[i];
+        }
+      }
+      return null;
     };
     this.load = function(fileid, callback){
         var xhr = new XMLHttpRequest();

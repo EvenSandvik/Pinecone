@@ -90,8 +90,9 @@ main div {
 #oversikt {
   visibility: hidden;
   grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-
-
+}
+#oversikt div {
+  background-color: #4e45ff;
 }
 #detaljer {
   visibility: hidden;
