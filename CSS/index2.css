@@ -1,0 +1,115 @@
+header ul{
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+
+}
+header ul li{
+  margin: 15px 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  transition: color 0.25s;
+}
+header ul li:hover{
+cursor: pointer;
+color: #9d9dc0;
+}
+.st-deco{
+width: 200px;
+height: 200px;
+position: absolute;
+top: 0px;
+left: 50%;
+margin-left: -100px;
+background: #636a7c;
+-webkit-transform: translateY(-50%) rotate(45deg);
+-moz-transform: translateY(-50%) rotate(45deg);
+-o-transform: translateY(-50%) rotate(45deg);
+-ms-transform: translateY(-50%) rotate(45deg);
+transform: translateY(-50%) rotate(45deg);
+}
+.st-deco{
+width: 120px;
+height: 120px;
+margin-left: -60px;
+}
+[data-icon]:after {
+font-size: 60px;
+-webkit-transform: rotate(-45deg) translateY(15%);
+-moz-transform: rotate(-45deg) translateY(15%);
+-o-transform: rotate(-45deg) translateY(15%);
+-ms-transform: rotate(-45deg) translateY(15%);
+transform: rotate(-45deg) translateY(15%);
+}
+#wrapper {
+min-height: 100%;
+display: grid;
+grid-template-rows: 50px auto 40px;
+background-color:#50587b;
+}
+header,
+footer {
+background-color: #eae6e6;
+
+}
+footer{
+text-align: center;
+padding: 3px;
+}
+main div {
+display: grid;
+}
+#intro{
+grid-template-columns: 1fr 5fr 1fr;
+text-align: center;
+padding: 1em;
+
+}
+#intro_blokk{
+grid-column: 2;
+display: grid;
+grid-template-columns: 1fr 3fr 1fr;
+grid-template-rows: 1fr 3fr 1fr;
+background-color: #eae6e6;
+padding: 3em 3em;
+}
+#intro_text h1{
+padding-bottom: 2em;
+grid-column: 2;
+grid-row: 1;
+}
+#intro_text {
+grid-column: 2;
+grid-row: 2;
+}
+#intro_logo{
+grid-column: 1;
+grid-row: 1;
+margin-left: auto;
+margin-right: auto;
+width: 100px;
+}
+#intro_kommune{
+grid-column: 3;
+grid-row: 1;
+margin-left: auto;
+margin-right: auto;
+width: 100px;
+}
+
+#oversikt {
+visibility: hidden;
+grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+
+
+}
+#detaljer {
+visibility: hidden;
+
+}
+#sammen {
+visibility: hidden;
+}
