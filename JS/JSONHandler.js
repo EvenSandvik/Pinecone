@@ -39,10 +39,26 @@ function Data(fileid) {
   };
 }
 
-let kommunedata = new Data(104857);
-kommunedata.load(kommunedata.fileid, function (input) {
-kommunedata.data = input;
-  if (kommunedata.onload) { kommunedata.onload() }
+// Load all the datasets for use.
+
+let syssel = new Data(100145);
+syssel.load(syssel.fileid, function(input){
+  syssel.data = input;
+  if(syssel.onload){syssel.onload();}
+});
+
+let utdanning = new Data(85432);
+utdanning.load(utdanning.fileid, function(input){
+  utdanning.data = input;
+  if(utdanning.onload){
+    utdanning.onload();
+  }
+})
+
+let befolkning = new Data(104857);
+befolkning.load(befolkning.fileid, function (input) {
+befolkning.data = input;
+  if (befolkning.onload) { befolkning.onload(); }
 });
 
 
