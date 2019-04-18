@@ -1,12 +1,10 @@
-const intro_h = document.getElementById('intro');
-const oversikt_h = document.getElementById('oversikt');
-const detaljer_h = document.getElementById('detaljer');
-const sammen_h = document.getElementById('sammen');
+function display(tab) {
+  // Needs to be here because of loading order
+  let intro_h = document.getElementById('intro');
+  let oversikt_h = document.getElementById('oversikt');
+  let detaljer_h = document.getElementById('detaljer');
+  let sammen_h = document.getElementById('sammen');
 
-
-
-
-function diplay(tab) {
   intro_h.style.visibility = "hidden";
   oversikt_h.style.visibility = "hidden";
   detaljer_h.style.visibility = "hidden";
@@ -24,6 +22,8 @@ function diplay(tab) {
       break;
     case "oversikt":
       sammen_h.style.visibility = "visible";
+      break;
+    default:
       break;
   }
 }
