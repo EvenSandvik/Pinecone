@@ -103,15 +103,15 @@ width: 100px;
 }
 
 #oversikt {
-visibility: hidden;
+display: none;
 grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
 
 
 }
 #detaljer {
-visibility: hidden;
+display: none;
 
 }
 #sammen {
-visibility: hidden;
+display: none;
 }
