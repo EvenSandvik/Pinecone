@@ -49,6 +49,8 @@ min-height: 100%;
 display: grid;
 grid-template-rows: 50px auto 40px;
 background-color:#50587b;
+background-image: url("https://t4.ftcdn.net/jpg/02/11/23/83/500_F_211238318_isgIlFHxDCJnVrAstHRJkjwKFG46pxhN.jpg");
+background-repeat:repeat;
 }
 header,
 footer {
