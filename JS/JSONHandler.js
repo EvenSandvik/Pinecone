@@ -58,6 +58,7 @@ utdanning.load(utdanning.fileid, function(input){
 let befolkning = new Data(104857);
 befolkning.load(befolkning.fileid, function (input) {
 befolkning.data = input;
+// Call this here to make sure data is loaded before showing.
 overview();
   if (befolkning.onload) { befolkning.onload(); }
 });
