@@ -1,9 +1,9 @@
 function display(tab) {
   // Needs to be here because of loading order
-  let intro_h = document.getElementById('intro');
-  let oversikt_h = document.getElementById('oversikt');
-  let detaljer_h = document.getElementById('detaljer');
-  let sammen_h = document.getElementById('sammen');
+  let intro_h = document.getElementById("intro");
+  let oversikt_h = document.getElementById("oversikt");
+  let detaljer_h = document.getElementById("detaljer");
+  let sammen_h = document.getElementById("sammen");
 
   intro_h.style.visibility = "hidden";
   oversikt_h.style.visibility = "hidden";
@@ -17,10 +17,10 @@ function display(tab) {
     case "oversikt":
       oversikt_h.style.visibility = "visible";
       break;
-    case "oversikt":
+    case "detaljer":
       detaljer_h.style.visibility = "visible";
       break;
-    case "oversikt":
+    case "sammen":
       sammen_h.style.visibility = "visible";
       break;
     default:

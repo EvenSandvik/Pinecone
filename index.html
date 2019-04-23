@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link href="CSS/main.css" rel="stylesheet">
   <link href="CSS/index.css" rel="stylesheet">
+  <script src="JS/DisplayData.js"></script>
   <script src="JS/JSONHandler.js"></script>
   <script src="JS/UserChoice.js"></script>
   <!-- Font from google API's -->
@@ -22,11 +23,12 @@
         <li onclick="dispaly('sammen')">Sammenlign</li>
       </ul>
     </header>
+
     <main>
-      <div id='intro'>
-        <div id='intro_blokk'>
+      <div id="intro">
+        <div id="intro_blokk">
           <h1>Introduksjon</h1>
-          <div id='intro_text'>
+          <div id="intro_text">
             <p>Her kan du få litt statistikk du</p>
             <p>Introduksjonsteksten skal bestå av tekst som beskriv produktet deira.
               Det skal òg innehalda
@@ -38,9 +40,9 @@
         </div>
 
       </div>
-      <div id='oversikt'>
+      <div id="oversikt">
         <div>
-          <table>
+          <table id = "oversikt_tabell">
             <tr>
               <th>Kommune</th>
               <th>Kommunenummer</th>
@@ -49,12 +51,13 @@
           </table>
         </div>
       </div>
-      <div id='detaljer'>Lorum ipsum
+
+      <div id="detaljer">Lorum ipsum
         <form onsubmit="detaljerKommune()">
           <input type="text" name="kName" placeholder="Kommunenummer">
           <input type="submit" value="Se detaljer!">
         </form>
-        <div id='kommune_info'>
+        <div id="kommune_info">
 
         </div>
         <div id="kommune_detaljer">

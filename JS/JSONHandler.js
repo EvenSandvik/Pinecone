@@ -32,7 +32,6 @@ function Data(fileid) {
       if (xhr.readyState == 4 && xhr.status == 200) {
         let response = JSON.parse(xhr.responseText);
         callback(response);
-
       }
     };
     xhr.send();
@@ -42,6 +41,7 @@ function Data(fileid) {
 // Load all the datasets for use.
 
 let syssel = new Data(100145);
+// add onload by "syssel.onload = function(){...}"
 syssel.load(syssel.fileid, function(input){
   syssel.data = input;
   if(syssel.onload){syssel.onload();}
@@ -58,6 +58,7 @@ utdanning.load(utdanning.fileid, function(input){
 let befolkning = new Data(104857);
 befolkning.load(befolkning.fileid, function (input) {
 befolkning.data = input;
+overview();
   if (befolkning.onload) { befolkning.onload(); }
 });
 
