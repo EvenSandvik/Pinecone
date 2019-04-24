@@ -28,9 +28,9 @@ color: #9d9dc0;
   -webkit-transform: translateY(-50%) rotate(45deg);
   }
   .st-deco{
-  width: 120px;
-  height: 120px;
-  margin-left: -60px;
+  width: 90px;
+  height: 90px;
+  margin-left: -45px;
   }
 #wrapper {
 min-height: 100%;
