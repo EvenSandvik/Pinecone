@@ -55,6 +55,7 @@ display: grid;
 
 .fane div{
   background-color: #eae6e6;
+  border: 1px solid rgb(207, 207, 207);
 }
 
 #intro{
