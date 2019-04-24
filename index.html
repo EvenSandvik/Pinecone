@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <link href="CSS/main.css" rel="stylesheet">
-  <link href="CSS/index.css" rel="stylesheet">
+
+  <link href="CSS/index2.css" rel="stylesheet">
   <script src="JS/DisplayData.js"></script>
   <script src="JS/JSONHandler.js"></script>
   <script src="JS/UserChoice.js"></script>
@@ -16,6 +17,7 @@
 <body>
   <div id="wrapper">
     <header>
+        <div class="st-deco" data-icon="E"></div>
       <ul>
         <li onclick="display('intro')">Introduksjon</li>
         <li onclick="display('oversikt')">Oversikt</li>
@@ -25,22 +27,20 @@
     </header>
 
     <main>
-      <div id="intro">
+      <div id="intro" class="fane">
         <div id="intro_blokk">
           <h1>Introduksjon</h1>
           <div id="intro_text">
-            <p>Her kan du få litt statistikk du</p>
-            <p>Introduksjonsteksten skal bestå av tekst som beskriv produktet deira.
-              Det skal òg innehalda
-              lenkjer til SSB-sine offisielle sider, og ein notis om at dataa kan
-              innehalda feil.</p>
+            <h3>Siden inneholder statistikk over Norges befolkning, hentet fra Statistisk sentralbyrå (SSB)</h3>
+            <a href="https://www.ssb.no/">https://www.ssb.no/</a>
+            <p>Notis: SSB kan inneholde feil</p>
           </div>
-          <img id="intro_logo" src="Images/ssb_logo.png" alt="ssb logo">
-          <img id="intro_kommune" src="Images/h_kommune.png" alt="selje kommunevåpen">
+          <img id="intro_logo" src="Images/ssb_logo.png" alt="ssb logo" >
+          <img id="intro_kommune" src="Images/selje_kommune.png" alt="selje kommunevåpen" >
         </div>
 
       </div>
-      <div id="oversikt">
+      <div id="oversikt" class="fane">
         <div>
           <table id = "oversikt_tabell">
             <tr>
@@ -51,16 +51,15 @@
           </table>
         </div>
       </div>
-
       <div id="detaljer">
         <div id="kommune_info"></div>
         <div id="kommune_detaljer"></div>
         <br>
         Hent oversikt fra kommunenr:
         <input type="text" name="kName" placeholder="Kommunenummer" id ="nr">
-          <button onclick= "detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
+        <button onclick= "detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
        </div>
-      <div id='sammen'>Lorum ipsum</div>
+      <div id='sammen' class = "fane">Lorum ipsum</div>
 
     </main>
     <footer>

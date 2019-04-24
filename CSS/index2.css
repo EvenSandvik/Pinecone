@@ -1,0 +1,107 @@
+body,
+html{
+  height: 100%;
+}
+header ul{
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+
+}
+header ul li{
+  margin: 15px 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  transition: color 0.25s;
+}
+header ul li:hover{
+cursor: pointer;
+color: #9d9dc0;
+}
+.st-deco{
+  position: absolute;
+  left: 50%;
+  background: #677994;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  }
+  .st-deco{
+  width: 90px;
+  height: 90px;
+  margin-left: -45px;
+  }
+#wrapper {
+min-height: 100%;
+display: grid;
+grid-template-rows: 50px auto 40px;
+background-color:#50587b;
+background-image: url("https://t4.ftcdn.net/jpg/02/11/23/83/500_F_211238318_isgIlFHxDCJnVrAstHRJkjwKFG46pxhN.jpg");
+background-repeat:repeat;
+}
+header,
+footer {
+background-color: #eae6e6;
+
+}
+footer{
+text-align: center;
+padding: 3px;
+}
+.fane {
+display: grid;
+}
+
+.fane div{
+  background-color: #eae6e6;
+}
+
+#intro{
+grid-template-columns: 1fr 5fr 1fr;
+text-align: center;
+padding: 1em;
+}
+
+#intro_blokk{
+grid-column: 2;
+display: grid;
+grid-template-columns: 1fr 3fr 1fr;
+grid-template-rows: 1fr 3fr 1fr;
+padding: 3em 3em;
+}
+#intro_text h1{
+padding-bottom: 2em;
+grid-column: 2;
+grid-row: 1;
+}
+#intro_text {
+grid-column: 2;
+grid-row: 2;
+}
+#intro_logo{
+grid-column: 1;
+grid-row: 1;
+margin-left: auto;
+margin-right: auto;
+width: 100px;
+}
+#intro_kommune{
+grid-column: 3;
+grid-row: 1;
+margin-left: auto;
+margin-right: auto;
+width: 100px;
+}
+
+#oversikt {
+display: none;
+grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+}
+#detaljer {
+display: none;
+
+}
+#sammen {
+display: none;
+}
