@@ -31,11 +31,9 @@
         <div id="intro_blokk">
           <h1>Introduksjon</h1>
           <div id="intro_text">
-            <p>Her kan du få litt statistikk du</p>
-            <p>Introduksjonsteksten skal bestå av tekst som beskriv produktet deira.
-              Det skal òg innehalda
-              lenkjer til SSB-sine offisielle sider, og ein notis om at dataa kan
-              innehalda feil.</p>
+            <h3>Siden inneholder statistikk over Norges befolkning, hentet fra Statistisk sentralbyrå (SSB)</h3>
+            <a href="https://www.ssb.no/">https://www.ssb.no/</a>
+            <p>Notis: SSB kan inneholde feil</p>
           </div>
           <img id="intro_logo" src="Images/ssb_logo.png" alt="ssb logo" >
           <img id="intro_kommune" src="Images/selje_kommune.png" alt="selje kommunevåpen" >
@@ -53,20 +51,15 @@
           </table>
         </div>
       </div>
-
-      <div id="detaljer" class="fane">Lorum ipsum
-        <form onsubmit="detaljerKommune()">
-          <input type="text" name="kName" placeholder="Kommunenummer">
-          <input type="submit" value="Se detaljer!">
-        </form>
-        <div id="kommune_info">
-
-        </div>
-        <div id="kommune_detaljer">
-
-        </div>
-      </div>
-      <div id='sammen' class="fane">Lorum ipsum</div>
+      <div id="detaljer" class="fane">
+        <div id="kommune_info"></div>
+        <div id="kommune_detaljer"></div>
+        <br>
+        <div>Hent oversikt fra kommunenr:</div>
+        <input type="text" name="kName" placeholder="Kommunenummer" id ="nr">
+        <button onclick= "detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
+       </div>
+      <div id='sammen' class = "fane">Lorum ipsum</div>
 
     </main>
     <footer>

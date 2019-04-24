@@ -63,4 +63,6 @@ overview();
   if (befolkning.onload) { befolkning.onload(); }
 });
 
+let detaljBef = befolkning;
+
 

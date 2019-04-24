@@ -22,32 +22,16 @@ cursor: pointer;
 color: #9d9dc0;
 }
 .st-deco{
-width: 200px;
-height: 200px;
-position: absolute;
-top: 0px;
-left: 50%;
-margin-left: -100px;
-background: #636a7c;
--webkit-transform: translateY(-50%) rotate(45deg);
--moz-transform: translateY(-50%) rotate(45deg);
--o-transform: translateY(-50%) rotate(45deg);
--ms-transform: translateY(-50%) rotate(45deg);
-transform: translateY(-50%) rotate(45deg);
-}
-.st-deco{
-width: 120px;
-height: 120px;
-margin-left: -60px;
-}
-[data-icon]:after {
-font-size: 60px;
--webkit-transform: rotate(-45deg) translateY(15%);
--moz-transform: rotate(-45deg) translateY(15%);
--o-transform: rotate(-45deg) translateY(15%);
--ms-transform: rotate(-45deg) translateY(15%);
-transform: rotate(-45deg) translateY(15%);
-}
+  position: absolute;
+  left: 50%;
+  background: #677994;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  }
+  .st-deco{
+  width: 90px;
+  height: 90px;
+  margin-left: -45px;
+  }
 #wrapper {
 min-height: 100%;
 display: grid;
@@ -111,8 +95,6 @@ width: 100px;
 #oversikt {
 display: none;
 grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-
-
 }
 #detaljer {
 display: none;
