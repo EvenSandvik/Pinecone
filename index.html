@@ -17,7 +17,7 @@
 <body>
   <div id="wrapper">
     <header>
-        <div class="st-deco" data-icon="E"></div>
+      <div class="st-deco" data-icon="E"></div>
       <ul>
         <li onclick="display('intro')">Introduksjon</li>
         <li onclick="display('oversikt')">Oversikt</li>
@@ -35,12 +35,17 @@
             <a href="https://www.ssb.no/">https://www.ssb.no/</a>
             <p>Notis: SSB kan inneholde feil</p>
           </div>
-          <img id="intro_logo" src="Images/ssb_logo.png" alt="ssb logo" >
-          <img id="intro_kommune" src="Images/selje_kommune.png" alt="selje kommunevåpen" >
+          <img id="intro_logo" src="Images/ssb_logo.png" alt="ssb logo">
+          <img id="intro_kommune" src="Images/selje_kommune.png" alt="selje kommunevåpen">
         </div>
 
       </div>
       <div id="oversikt" class="fane">
+        <div id="oversikt_text" style="text-align:center;">
+          <h1>Oversikt</h1>
+          <p>Her du se en oversikt over alle kommunene i Norge, <br>kommunenummer og sist målte befolkning.</p>
+          <p>Vi kan ta vekk dinna div-en visst d e bedre.</p>
+        </div>
         <!-- Tables are put here from the DisplayData -->
       </div>
       <div id="detaljer" class="fane">
@@ -48,10 +53,10 @@
         <div id="kommune_detaljer"></div>
         <br>
         <div>Hent oversikt fra kommunenr:</div>
-        <input type="text" name="kName" placeholder="Kommunenummer" id ="nr">
-        <button onclick= "detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
-       </div>
-      <div id='sammen' class = "fane">Lorum ipsum</div>
+        <input type="text" name="kName" placeholder="Kommunenummer" id="nr">
+        <button onclick="detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
+      </div>
+      <div id='sammen' class="fane">Lorum ipsum</div>
 
     </main>
     <footer>

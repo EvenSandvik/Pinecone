@@ -14,6 +14,12 @@ function overview() {
     //Create div
     var div = document.createElement("DIV");
 
+    //Create header
+    var heading = document.createElement("H3");
+    heading.innerHTML = alpha[boks];
+    heading.style.textAlign = "center";
+    div.appendChild(heading); 
+
     //Create table
     var table = document.createElement("TABLE");
 

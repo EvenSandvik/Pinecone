@@ -15,7 +15,7 @@ function display(tab) {
       intro_h.style.display = "grid";
       break;
     case "oversikt":
-      oversikt_h.style.display = "grid";
+      oversikt_h.style.display = "flex";
       break;
     case "detaljer":
       detaljer_h.style.display = "grid";

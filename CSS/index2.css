@@ -106,17 +106,19 @@ footer {
 
 #oversikt {
   display: none;
-  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  align-items: flex-start;
   margin: 0px 2em;
   text-align: right;
 
 }
 #oversikt div{
-  align-self: start;
   padding: 1em;
+  flex-grow: 1;
 }
 #oversikt table {
   padding: 1em;
+  width: 100%;
 }
 #oversikt tr:nth-child(even) {
   background-color: #cccccc;
