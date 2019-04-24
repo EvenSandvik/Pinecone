@@ -52,18 +52,14 @@
         </div>
       </div>
 
-      <div id="detaljer">Lorum ipsum
-        <form onsubmit="detaljerKommune()">
-          <input type="text" name="kName" placeholder="Kommunenummer">
-          <input type="submit" value="Se detaljer!">
-        </form>
-        <div id="kommune_info">
-
-        </div>
-        <div id="kommune_detaljer">
-
-        </div>
-      </div>
+      <div id="detaljer">
+        <div id="kommune_info"></div>
+        <div id="kommune_detaljer"></div>
+        <br>
+        Hent oversikt fra kommunenr:
+        <input type="text" name="kName" placeholder="Kommunenummer" id ="nr">
+          <button onclick= "detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
+       </div>
       <div id='sammen'>Lorum ipsum</div>
 
     </main>
