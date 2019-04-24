@@ -67,16 +67,14 @@ padding: 3px;
 }
 .fane {
 display: grid;
+grid-template-columns: 1fr 5fr 1fr;
+text-align: center;
+padding: 1em;
 }
 
 .fane div{
   background-color: #eae6e6;
-}
-
-#intro{
-grid-template-columns: 1fr 5fr 1fr;
-text-align: center;
-padding: 1em;
+  grid-column: 2;
 }
 
 #intro_blokk{
