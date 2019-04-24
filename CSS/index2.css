@@ -1,15 +1,16 @@
 body,
-html{
+html {
   height: 100%;
 }
-header ul{
+
+header ul {
   display: flex;
   list-style-type: none;
   align-items: center;
   justify-content: space-around;
-
 }
-header ul li{
+
+header ul li {
   margin: 15px 5px;
   text-transform: uppercase;
   font-weight: bold;
@@ -17,89 +18,117 @@ header ul li{
   text-align: center;
   transition: color 0.25s;
 }
-header ul li:hover{
-cursor: pointer;
-color: #9d9dc0;
+
+header ul li:hover {
+  cursor: pointer;
+  color: #9d9dc0;
 }
-.st-deco{
+
+.st-deco {
   position: absolute;
   left: 50%;
   background: #677994;
   -webkit-transform: translateY(-50%) rotate(45deg);
-  }
-  .st-deco{
+}
+
+.st-deco {
   width: 90px;
   height: 90px;
   margin-left: -45px;
-  }
-#wrapper {
-min-height: 100%;
-display: grid;
-grid-template-rows: 50px auto 40px;
-background-color:#50587b;
-background-image: url("https://t4.ftcdn.net/jpg/02/11/23/83/500_F_211238318_isgIlFHxDCJnVrAstHRJkjwKFG46pxhN.jpg");
-background-repeat:repeat;
 }
+
+#wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 50px auto 40px;
+  background-color: #50587b;
+  background-image: url("https://t4.ftcdn.net/jpg/02/11/23/83/500_F_211238318_isgIlFHxDCJnVrAstHRJkjwKFG46pxhN.jpg");
+  background-repeat: repeat;
+}
+
 header,
 footer {
-background-color: #eae6e6;
-
-}
-footer{
-text-align: center;
-padding: 3px;
-}
-.fane {
-display: grid;
-grid-template-columns: 1fr 5fr 1fr;
-text-align: center;
-padding: 1em;
-}
-
-.fane div{
   background-color: #eae6e6;
-  grid-column: 2;
 }
 
-#intro_blokk{
-grid-column: 2;
-display: grid;
-grid-template-columns: 1fr 3fr 1fr;
-grid-template-rows: 1fr 3fr 1fr;
-padding: 3em 3em;
+footer {
+  text-align: center;
+  padding: 3px;
 }
-#intro_text h1{
-padding-bottom: 2em;
-grid-column: 2;
-grid-row: 1;
+
+.fane {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  text-align: center;
+  padding: 1em;
+  grid-gap: 1em;
 }
+
+.fane div {
+  background-color: #eae6e6;
+}
+
+#intro_blokk {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  padding: 3em 3em;
+}
+
+#intro_text h1 {
+  padding-bottom: 2em;
+  grid-column: 2;
+  grid-row: 1;
+}
+
 #intro_text {
-grid-column: 2;
-grid-row: 2;
+  grid-column: 2;
+  grid-row: 2;
 }
-#intro_logo{
-grid-column: 1;
-grid-row: 1;
-margin-left: auto;
-margin-right: auto;
-width: 100px;
+
+#intro_logo {
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
 }
-#intro_kommune{
-grid-column: 3;
-grid-row: 1;
-margin-left: auto;
-margin-right: auto;
-width: 100px;
+
+#intro_kommune {
+  grid-column: 3;
+  grid-row: 1;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
 }
 
 #oversikt {
-display: none;
-grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-}
-#detaljer {
-display: none;
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0px 2em;
+  text-align: right;
 
 }
+#oversikt div{
+  align-self: start;
+  padding: 1em;
+}
+#oversikt table {
+  padding: 1em;
+}
+#oversikt tr:nth-child(even) {
+  background-color: #cccccc;
+}
+#oversikt th {
+  padding: 3px;
+  background-color: #677994;
+}
+
+#detaljer {
+  display: none;
+}
+
 #sammen {
-display: none;
+  display: none;
 }
