@@ -1,3 +1,7 @@
+/**
+ * Constructor template to load data.
+ * @param {*} fileid 
+ */
 function Data(fileid) {
   this.fileid = fileid;
   this.data = {};

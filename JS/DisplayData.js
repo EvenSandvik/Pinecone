@@ -32,6 +32,10 @@ function overview() {
     }
 }
 
+/**
+ * Show details about a kommune
+ * @param kommunenr, the given number
+ */
 function detaljerKommune(kommunenr) {
     // Remove all info from previous search
     var info = document.getElementById("kommune_info");
@@ -72,17 +76,22 @@ function showKommuneHistory(befolkningsinfo, sysselinfo, utdanningsinfo, info, d
 
     var kommunenavn = Object.keys(befolkningsinfo)[0];
 
+    // Create tables to show the detailed info about the kommune
     createInfoTable(befolkningsinfo[kommunenavn], "Befolkning");
     createInfoTable(sysselinfo[kommunenavn], "Sysselsatte (%)");
-    createInfoTable(utdanningsinfo[kommunenavn]["01"], "Grunnskoleutdannelse");
-    createInfoTable(utdanningsinfo[kommunenavn]["02a"], "Videregående skole");
-    createInfoTable(utdanningsinfo[kommunenavn]["11"], "Fagskole");
-    createInfoTable(utdanningsinfo[kommunenavn]["03a"], "Universitet/høyskole, kort");
-    createInfoTable(utdanningsinfo[kommunenavn]["04a"], "Universitet/høyskole, lang");
-    createInfoTable(utdanningsinfo[kommunenavn]["09a"], "Ingen/uoppgitt utdannelse");   
-
+    createInfoTable(utdanningsinfo[kommunenavn]["01"], "Grunnskoleutdannelse (%)");
+    createInfoTable(utdanningsinfo[kommunenavn]["02a"], "Videregående skole (%)");
+    createInfoTable(utdanningsinfo[kommunenavn]["11"], "Fagskole (%)");
+    createInfoTable(utdanningsinfo[kommunenavn]["03a"], "Universitet/høyskole, kort (%)");
+    createInfoTable(utdanningsinfo[kommunenavn]["04a"], "Universitet/høyskole, lang (%)");
+    createInfoTable(utdanningsinfo[kommunenavn]["09a"], "Ingen/uoppgitt utdannelse (%)");   
 }
 
+/**
+ * Create and append tables to details in HTML-sheet
+ * @param {*} info the object to get information from
+ * @param {*} type the title of the table
+ */
 function createInfoTable(info, type){
     var htmlPlace = document.getElementById("kommune_detaljer");
     var div = document.createElement("DIV");
@@ -168,11 +177,19 @@ function showKommuneInfo(kommunenr, befolkningsinfo, sysselinfo, utdanningsinfo,
 
 }
 
+/**
+ * Converts from a percentage to an amount number
+ * @param {*} percentage, the given percentage
+ * @param {*} total, the total amount of people
+ */
 function convertFromPercentage(percentage, total) {
     return (percentage / 100 * total);
 }
 
-
+/**
+ * Removes all children from the given node
+ * @param {*} node 
+ */
 function removeChildren(node) {
     while (node.firstChild) {
         node.removeChild(node.firstChild);
