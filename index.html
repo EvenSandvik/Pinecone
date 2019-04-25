@@ -49,12 +49,13 @@
         <!-- Tables are put here from the DisplayData -->
       </div>
       <div id="detaljer" class="fane">
+        <div id="detaljer_form">
+          <h2 style="padding:1em 2em;">Hent oversikt fra kommunenr:</h2>
+          <input type="text" name="kName" placeholder="Kommunenummer" id="nr">
+          <button onclick="detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
+        </div>
         <div id="kommune_info"></div>
         <div id="kommune_detaljer"></div>
-        <br>
-        <div>Hent oversikt fra kommunenr:</div>
-        <input type="text" name="kName" placeholder="Kommunenummer" id="nr">
-        <button onclick="detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
       </div>
       <div id='sammen' class="fane">Lorum ipsum</div>
 

@@ -130,6 +130,44 @@ footer {
 
 #detaljer {
   display: none;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+#detaljer_form{
+  padding: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  grid-column: 2;
+  grid-row: 1;
+}
+#kommune_info{
+  grid-column: 2;
+  grid-row: 2;
+  padding: 1em;
+  font-weight: bold;
+  margin: auto;
+}
+#kommune_detaljer{
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: flex-start;
+  background-color: transparent;
+  justify-content: space-around;
+  border: none;
+}
+#kommune_detaljer div{
+  margin-bottom: 1em;
+  padding: 1em;
+
+}
+#kommune_detaljer table{
+  padding: 0px 1em;
+  width: 100%;
+}
+#kommune_detaljer tr:nth-child(even) {
+  background-color: #cccccc;
 }
 
 #sammen {
