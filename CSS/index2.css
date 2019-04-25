@@ -135,9 +135,10 @@ footer {
 #detaljer_form{
   padding: 1em;
   box-sizing: border-box;
-  width: 100%;
+  width: 80%;
   grid-column: 2;
   grid-row: 1;
+  margin:auto;
 }
 #kommune_info{
   grid-column: 2;
@@ -160,7 +161,9 @@ footer {
 #kommune_detaljer div{
   margin-bottom: 1em;
   padding: 1em;
-
+}
+#kommune_detaljer div:first-child{
+  line-height: 2em;
 }
 #kommune_detaljer table{
   padding: 0px 1em;
@@ -168,6 +171,9 @@ footer {
 }
 #kommune_detaljer tr:nth-child(even) {
   background-color: #cccccc;
+}
+#detaljer_knapp{
+  background-color: #677994;
 }
 
 #sammen {

@@ -18,7 +18,7 @@ function overview() {
     var heading = document.createElement("H3");
     heading.innerHTML = alpha[boks];
     heading.style.textAlign = "center";
-    div.appendChild(heading); 
+    div.appendChild(heading);
 
     //Create table
     var table = document.createElement("TABLE");
@@ -200,23 +200,30 @@ function showKommuneInfo(kommunenr, befolkningsinfo, sysselinfo, utdanningsinfo,
     var utdanningKvinnerAntall = Math.round(convertFromPercentage(sisteUtdannelse["Kvinner"], sisteBefolkning["Kvinner"]));
     var utdanningMennAntall = Math.round(convertFromPercentage(sisteUtdannelse["Menn"], sisteBefolkning["Menn"]));
 
+    // The div to wrap it all
+    var theDiv = document.createElement("DIV");
+    var heading = document.createElement("H3");
+    heading.innerHTML = "Detaljer fra siste måling"
+    theDiv.appendChild(heading);
+
     // Add info to document
     var kommuneinfo = document.createTextNode("Kommunenavn: " + kommunenavn + ", kommunenr: " + kommunenr);
     info.appendChild(kommuneinfo);
 
     var befolkning = document.createTextNode("Total befolkning ved siste måling: " + totalBefolkning)
-    detaljer.appendChild(befolkning);
-    detaljer.appendChild(document.createElement("BR"));
+    theDiv.appendChild(befolkning);
+    theDiv.appendChild(document.createElement("BR"));
 
     var sysselsatte = document.createTextNode("Sysselsatte: " + sysselsatteAntall + " (" + sisteSysselsatte + "%)");
-    detaljer.appendChild(sysselsatte);
-    detaljer.appendChild(document.createElement("BR"));
+    theDiv.appendChild(sysselsatte);
+    theDiv.appendChild(document.createElement("BR"));
 
     var utdannelseMenn = document.createTextNode("Høyere utdannelse (menn): " + utdanningMennAntall + " (" + sisteUtdannelse["Menn"] + "%) ");
     var utdannelseKvinner = document.createTextNode("Høyere utdannelse (kvinner): " + utdanningKvinnerAntall + " (" + sisteUtdannelse["Kvinner"] + "%)");
-    detaljer.appendChild(utdannelseMenn);
-    detaljer.appendChild(document.createElement("BR"));
-    detaljer.appendChild(utdannelseKvinner);
+    theDiv.appendChild(utdannelseMenn);
+    theDiv.appendChild(document.createElement("BR"));
+    theDiv.appendChild(utdannelseKvinner);
+    detaljer.appendChild(theDiv)
 
 }
 
