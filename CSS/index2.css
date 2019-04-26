@@ -173,7 +173,14 @@ footer {
   background-color: #cccccc;
 }
 #detaljer_knapp{
-  background-color: #677994;
+    background-color: #677994;
+  display:inline-block;
+  cursor:pointer;
+  padding: 0.5em;
+  color: #eae6e6;
+}
+#detaljer_knapp:hover{
+  background-color: #7a8697;
 }
 
 #sammen {
