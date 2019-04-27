@@ -6,7 +6,9 @@
   <link href="CSS/main.css" rel="stylesheet">
 
   <link href="CSS/index2.css" rel="stylesheet">
-  <script src="JS/DisplayData.js"></script>
+  <script src="JS/ShowOverview.js"></script>
+  <script src="JS/ShowDetails.js"></script>
+  <script src="JS/ShowComparison.js"></script>
   <script src="JS/JSONHandler.js"></script>
   <script src="JS/UserChoice.js"></script>
   <!-- Font from google API's -->
@@ -22,7 +24,7 @@
         <li onclick="display('intro')">Introduksjon</li>
         <li onclick="display('oversikt')">Oversikt</li>
         <li onclick="display('detaljer')">Detaljer</li>
-        <li onclick="dispaly('sammen')">Sammenlign</li>
+        <li onclick="display('sammen')">Sammenlign</li>
       </ul>
     </header>
 
@@ -57,7 +59,17 @@
         <div id="kommune_info"></div>
         <div id="kommune_detaljer"></div>
       </div>
-      <div id='sammen' class="fane">Lorum ipsum</div>
+
+      <div id='sammen' class="fane">
+        <div id="sammen_form">
+          <h2 style="padding:1em 2em;">Sammenlign kommuner:</h2>
+          <input type="text" name="kName" placeholder="Kommunenummer" id="nr1">
+          <input type="text" name="kName" placeholder="Kommunenummer" id="nr2">
+          <button id="sammen_knapp" onclick="sammenlign(document.getElementById('nr1').value, document.getElementById('nr2').value)">Sammenlign kommuner!</button>
+        </div>
+        <div id="sammen_info"></div>
+
+      </div>
 
     </main>
     <footer>
