@@ -3,7 +3,7 @@ function display(tab) {
   let intro_h = document.getElementById("intro");
   let oversikt_h = document.getElementById("oversikt");
   let detaljer_h = document.getElementById("detaljer");
-  let sammen_h = document.getElementById("sammen");
+  let sammen_h = document.getElementById('sammen');
 
   intro_h.style.display = "none";
   oversikt_h.style.display = "none";
