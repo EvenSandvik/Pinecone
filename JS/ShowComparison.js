@@ -14,11 +14,11 @@ function sammenlign(knr1, knr2) {
     var navn1 = Object.keys(k1)[0];
     var k2 = syssel.getInfo(knr2);
     var navn2 = Object.keys(k2)[0];
-    createInfoTable(navn1, k1[navn1], navn2, k2[navn2]);
+    createComparisonTable(navn1, k1[navn1], navn2, k2[navn2]);
 }
 
 
-function createInfoTable(navn1, k1, navn2, k2) {
+function createComparisonTable(navn1, k1, navn2, k2) {
     var placement = document.getElementById("sammen_info");
     var div = document.createElement("DIV");
     var table = document.createElement("TABLE");
