@@ -50,11 +50,12 @@
         </div>
         <!-- Tables are put here from the DisplayData -->
       </div>
+
       <div id="detaljer" class="fane">
         <div id="detaljer_form">
           <h2 style="padding:1em 2em;">Hent oversikt fra kommunenr:</h2>
           <input type="text" name="kName" placeholder="Kommunenummer" id="nr">
-          <button id="detaljer_knapp" onclick="detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
+          <button onclick="detaljerKommune(document.getElementById('nr').value)">Se detaljer!</button>
         </div>
         <div id="kommune_info"></div>
         <div id="kommune_detaljer"></div>
@@ -63,12 +64,11 @@
       <div id='sammen' class="fane">
         <div id="sammen_form">
           <h2 style="padding:1em 2em;">Sammenlign kommuner:</h2>
-          <input type="text" name="kName" placeholder="Kommunenummer" id="nr1">
-          <button id="sammen_knapp" onclick="sammenlign(document.getElementById('nr1').value, document.getElementById('nr2').value)">Sammenlign kommuner!</button>
-          <input type="text" name="kName" placeholder="Kommunenummer" id="nr2">
+          <input type="text" name="samName" placeholder="Kommunenummer" id="nr1">
+          <button onclick="sammenlign(document.getElementById('nr1').value, document.getElementById('nr2').value)">Sammenlign kommuner!</button>
+          <input type="text" name="samName1" placeholder="Kommunenummer" id="nr2">
         </div>
         <div id="sammen_info"></div>
-
       </div>
 
     </main>

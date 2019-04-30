@@ -4,26 +4,26 @@
  */
 function detaljerKommune(kommunenr) {
     // Remove all info from previous search
-    var info = document.getElementById("kommune_info");
-    var detaljer = document.getElementById("kommune_detaljer");
+    let info = document.getElementById("kommune_info");
+    let detaljer = document.getElementById("kommune_detaljer");
     removeChildren(info);
     removeChildren(detaljer);
 
     // Check for legal arguments
     if (!detaljBef.getIDs().includes(kommunenr)) {
         console.log("Illegal argument. No such kommune.");
-        var error = document.createTextNode("Invalid kommune-number.");
+        let error = document.createTextNode("Invalid kommune-number.");
         info.appendChild(error);
         return;
     }
 
     // Get all info about the given kommunenr
-    var befolkningsinfo = detaljBef.getInfo(kommunenr);
-    var sysselinfo = syssel.getInfo(kommunenr);
-    var utdanningsinfo = utdanning.getInfo(kommunenr);
+    let befolkningsinfo = detaljBef.getInfo(kommunenr);
+    let sysselinfo = syssel.getInfo(kommunenr);
+    let utdanningsinfo = utdanning.getInfo(kommunenr);
 
     showKommuneInfo(kommunenr, befolkningsinfo, sysselinfo, utdanningsinfo, info, detaljer);
-    showKommuneHistory(befolkningsinfo, sysselinfo, utdanningsinfo, info, detaljer);
+    showKommuneHistory(befolkningsinfo, sysselinfo, utdanningsinfo);
 
 }
 
@@ -35,12 +35,8 @@ function detaljerKommune(kommunenr) {
  * @param {*} info info-div in index.html
  * @param {*} detaljer detaljer-div in index.html
  */
-function showKommuneHistory(befolkningsinfo, sysselinfo, utdanningsinfo, info, detaljer){
-    var befdiv = document.createElement("div");
-    var sysdiv = document.createElement("div");
-    var utddiv = document.createElement("div");
-
-    var kommunenavn = Object.keys(befolkningsinfo)[0];
+function showKommuneHistory(befolkningsinfo, sysselinfo, utdanningsinfo){
+    let kommunenavn = Object.keys(befolkningsinfo)[0];
 
     // Create tables to show the detailed info about the kommune
     createInfoTable(befolkningsinfo[kommunenavn], "Befolkning");
@@ -59,24 +55,24 @@ function showKommuneHistory(befolkningsinfo, sysselinfo, utdanningsinfo, info, d
  * @param {*} type the title of the table
  */
 function createInfoTable(info, type){
-    var htmlPlace = document.getElementById("kommune_detaljer");
-    var div = document.createElement("DIV");
-    var table = document.createElement("TABLE");
+    let htmlPlace = document.getElementById("kommune_detaljer");
+    let div = document.createElement("DIV");
+    let table = document.createElement("TABLE");
 
     // Create table header
-    var header = document.createElement("TR");
-    var headerTitle = document.createElement("TH");
+    let header = document.createElement("TR");
+    let headerTitle = document.createElement("TH");
     headerTitle.innerHTML = type;
     header.appendChild(headerTitle);
     table.appendChild(header);
 
     // Create top row of table
-    var headerRow = document.createElement("TR");
-    var c1 = document.createElement("TH");
+    let headerRow = document.createElement("TR");
+    let c1 = document.createElement("TH");
     c1.innerHTML = "År";
-    var c2 = document.createElement("TH");
+    let c2 = document.createElement("TH");
     c2.innerHTML = "Kvinner"
-    var c3 = document.createElement("TH");
+    let c3 = document.createElement("TH");
     c3.innerHTML = "Menn";
     headerRow.appendChild(c1);
     headerRow.appendChild(c2);
@@ -87,12 +83,12 @@ function createInfoTable(info, type){
 
     // Add all elements (assumes all data have the same years)
     for(const yy in info.Kvinner){
-        var tr = document.createElement("TR");
-        var c1 = document.createElement("TD");
+        let tr = document.createElement("TR");
+        let c1 = document.createElement("TD");
         c1.innerHTML = yy;
-        var c2 = document.createElement("TD");
+        let c2 = document.createElement("TD");
         c2.innerHTML = info.Kvinner[yy];
-        var c3 = document.createElement("TD");
+        let c3 = document.createElement("TD");
         c3.innerHTML = info.Menn[yy];
 
         tr.appendChild(c1);
@@ -113,36 +109,36 @@ function createInfoTable(info, type){
  */
 function showKommuneInfo(kommunenr, befolkningsinfo, sysselinfo, utdanningsinfo, info, detaljer) {
     // Extract relevant information
-    var kommunenavn = Object.keys(befolkningsinfo)[0];
-    var sisteBefolkning = getTotalPopulation(befolkningsinfo[kommunenavn]);
-    var sisteSysselsatte = getLastWorkStatistics(sysselinfo[kommunenavn]);
-    var sisteUtdannelse = getLastEducationStatistics(utdanningsinfo[kommunenavn]);
+    let kommunenavn = Object.keys(befolkningsinfo)[0];
+    let sisteBefolkning = getTotalPopulation(befolkningsinfo[kommunenavn]);
+    let sisteSysselsatte = getLastWorkStatistics(sysselinfo[kommunenavn]);
+    let sisteUtdannelse = getLastEducationStatistics(utdanningsinfo[kommunenavn]);
 
-    var totalBefolkning = sisteBefolkning["Kvinner"] + sisteBefolkning["Menn"];
-    var sysselsatteAntall = Math.round(convertFromPercentage(sisteSysselsatte, totalBefolkning));
-    var utdanningKvinnerAntall = Math.round(convertFromPercentage(sisteUtdannelse["Kvinner"], sisteBefolkning["Kvinner"]));
-    var utdanningMennAntall = Math.round(convertFromPercentage(sisteUtdannelse["Menn"], sisteBefolkning["Menn"]));
+    let totalBefolkning = sisteBefolkning["Kvinner"] + sisteBefolkning["Menn"];
+    let sysselsatteAntall = Math.round(convertFromPercentage(sisteSysselsatte, totalBefolkning));
+    let utdanningKvinnerAntall = Math.round(convertFromPercentage(sisteUtdannelse["Kvinner"], sisteBefolkning["Kvinner"]));
+    let utdanningMennAntall = Math.round(convertFromPercentage(sisteUtdannelse["Menn"], sisteBefolkning["Menn"]));
 
     // The div to wrap it all
-    var theDiv = document.createElement("DIV");
-    var heading = document.createElement("H3");
+    let theDiv = document.createElement("DIV");
+    let heading = document.createElement("H3");
     heading.innerHTML = "Detaljer fra siste måling"
     theDiv.appendChild(heading);
 
     // Add info to document
-    var kommuneinfo = document.createTextNode("Kommunenavn: " + kommunenavn + ", kommunenr: " + kommunenr);
+    let kommuneinfo = document.createTextNode("Kommunenavn: " + kommunenavn + ", kommunenr: " + kommunenr);
     info.appendChild(kommuneinfo);
 
-    var befolkning = document.createTextNode("Total befolkning ved siste måling: " + totalBefolkning)
+    let befolkning = document.createTextNode("Total befolkning ved siste måling: " + totalBefolkning)
     theDiv.appendChild(befolkning);
     theDiv.appendChild(document.createElement("BR"));
 
-    var sysselsatte = document.createTextNode("Sysselsatte: " + sysselsatteAntall + " (" + sisteSysselsatte + "%)");
+    let sysselsatte = document.createTextNode("Sysselsatte: " + sysselsatteAntall + " (" + sisteSysselsatte + "%)");
     theDiv.appendChild(sysselsatte);
     theDiv.appendChild(document.createElement("BR"));
 
-    var utdannelseMenn = document.createTextNode("Høyere utdannelse (menn): " + utdanningMennAntall + " (" + sisteUtdannelse["Menn"] + "%) ");
-    var utdannelseKvinner = document.createTextNode("Høyere utdannelse (kvinner): " + utdanningKvinnerAntall + " (" + sisteUtdannelse["Kvinner"] + "%)");
+    let utdannelseMenn = document.createTextNode("Høyere utdannelse (menn): " + utdanningMennAntall + " (" + sisteUtdannelse["Menn"] + "%) ");
+    let utdannelseKvinner = document.createTextNode("Høyere utdannelse (kvinner): " + utdanningKvinnerAntall + " (" + sisteUtdannelse["Kvinner"] + "%)");
     theDiv.appendChild(utdannelseMenn);
     theDiv.appendChild(document.createElement("BR"));
     theDiv.appendChild(utdannelseKvinner);
@@ -174,8 +170,8 @@ function removeChildren(node) {
  * @return the total population from the last year of measure
  */
 function getTotalPopulation(data) {
-    var kvinner = Object.keys(data.Kvinner).reduce((a, b) => a > b ? a : b);
-    var menn = Object.keys(data.Menn).reduce((a, b) => a > b ? a : b);
+    let kvinner = Object.keys(data.Kvinner).reduce((a, b) => a > b ? a : b);
+    let menn = Object.keys(data.Menn).reduce((a, b) => a > b ? a : b);
 
     return { Kvinner: data.Kvinner[kvinner], Menn: data.Menn[menn] };
 }
@@ -186,7 +182,7 @@ function getTotalPopulation(data) {
  * @return the amount of employed people of the last measured year in %
  */
 function getLastWorkStatistics(data) {
-    var lastYear = Object.keys(data["Begge kjønn"]).reduce((a, b) => a > b ? a : b);
+    let lastYear = Object.keys(data["Begge kjønn"]).reduce((a, b) => a > b ? a : b);
     return data["Begge kjønn"][lastYear];
 }
 
@@ -197,21 +193,21 @@ function getLastWorkStatistics(data) {
  */
 function getLastEducationStatistics(data) {
     // Assumes all data are measured in the same year
-    var year = Object.keys(data["04a"].Kvinner).reduce((a, b) => a > b ? a : b);
+    let year = Object.keys(data["04a"].Kvinner).reduce((a, b) => a > b ? a : b);
 
     // Get all percentages
 
     // Long education
-    var kvinnerLong = data["04a"]["Kvinner"][year];
-    var mennLong = data["04a"]["Menn"][year];
+    let kvinnerLong = data["04a"]["Kvinner"][year];
+    let mennLong = data["04a"]["Menn"][year];
 
     // Short education (3y, bachelor)
-    var kvinnerShort = data["03a"]["Kvinner"][year];
-    var mennShort = data["03a"]["Menn"][year];
+    let kvinnerShort = data["03a"]["Kvinner"][year];
+    let mennShort = data["03a"]["Menn"][year];
 
     // Total
-    var kvinner = kvinnerLong + kvinnerShort;
-    var menn = mennShort + mennLong;
+    let kvinner = kvinnerLong + kvinnerShort;
+    let menn = mennShort + mennLong;
 
     return { Kvinner: kvinner, Menn: menn };
 }
