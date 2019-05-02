@@ -86,6 +86,7 @@ footer {
 #intro_text {
   grid-column: 2;
   grid-row: 2;
+  border: none;
 }
 #intro_text p{
   padding: 1em;
@@ -227,4 +228,43 @@ footer {
 #sammen_info caption{
   padding: 1em;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .st-deco{
+    display: none;
+  }
+  html{
+    width: 100%;
+  }
+  img{
+    display: none;
+  }
+  header ul{
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  .fane{
+    grid-template-columns: auto;
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+  #intro_blokk h1 {
+    padding: 0 0 1em 0;
+  }
+  #intro_blokk{
+    display: block;
+  }
+  #wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 40px;
+  }
+  #oversikt div{
+    padding: 0.5em;
+    flex-grow: 0;
+    flex-shrink: 3;
+  }
+
 }
