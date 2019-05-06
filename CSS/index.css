@@ -1,85 +1,106 @@
-html,
-body{
+body,
+html {
   height: 100%;
-  width: 100%
 }
 
-header ul{
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    justify-content: space-around;
+header ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+}
 
+header ul li {
+  margin: 15px 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  transition: color 0.25s;
 }
-header ul li{
-    margin: 15px 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: center;
-    transition: color 0.6s;
-}
-header ul li:hover{
+
+header ul li:hover {
   cursor: pointer;
-  color: #4e45ff;
+  color: #9d9dc0;
 }
-main{
-  margin: 5px;
 
+.st-deco {
+  position: absolute;
+  left: 50%;
+  background: #677994;
+  -webkit-transform: translateY(-50%) rotate(45deg);
 }
+
+.st-deco {
+  width: 90px;
+  height: 90px;
+  margin-left: -45px;
+}
+
 #wrapper {
   min-height: 100%;
   display: grid;
   grid-template-rows: 50px auto 40px;
+  background-color: #50587b;
+  background-image: url("https://t4.ftcdn.net/jpg/02/11/23/83/500_F_211238318_isgIlFHxDCJnVrAstHRJkjwKFG46pxhN.jpg");
+  background-repeat: repeat;
 }
+
 header,
 footer {
-  background-color: #ff6f65;
+  background-color: #eae6e6;
+}
 
-}
-header {
-  border-radius: 0px 0px 10px 10px;
-}
-footer{
+footer {
   text-align: center;
-  border-radius: 10px 10px 0px 0px;
   padding: 3px;
 }
-main div {
+
+.fane {
   display: grid;
-}
-#intro{
   grid-template-columns: 1fr 5fr 1fr;
   text-align: center;
   padding: 1em;
-
+  grid-gap: 1em;
 }
-#intro_blokk{
+
+.fane div {
+  background-color: #eae6e6;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+#intro_blokk {
   grid-column: 2;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
-  background-color: #4e45ff;
   padding: 3em 3em;
-  border-radius: 10px;
 }
-#intro_text h1{
+
+#intro_text h1 {
   padding-bottom: 2em;
   grid-column: 2;
   grid-row: 1;
 }
+
 #intro_text {
   grid-column: 2;
   grid-row: 2;
+  border: none;
 }
-#intro_logo{
+#intro_text p{
+  padding: 1em;
+}
+
+#intro_logo {
   grid-column: 1;
   grid-row: 1;
   margin-left: auto;
   margin-right: auto;
   width: 100px;
 }
-#intro_kommune{
+
+#intro_kommune {
   grid-column: 3;
   grid-row: 1;
   margin-left: auto;
@@ -89,14 +110,172 @@ main div {
 
 #oversikt {
   display: none;
-  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0px 2em;
+  text-align: right;
+
 }
-#oversikt div {
-  background-color: #4e45ff;
+#oversikt_text p{
+  padding: 1em;
 }
+#oversikt div{
+  padding: 1em;
+  flex-grow: 1;
+}
+#oversikt table {
+  padding: 1em;
+  width: 100%;
+}
+#oversikt tr:nth-child(even) {
+  background-color: #cccccc;
+}
+#oversikt th {
+  padding: 3px;
+  background-color: #677994;
+}
+
 #detaljer {
   display: none;
+  grid-template-columns: 1fr 4fr 1fr;
 }
+#detaljer_form{
+  padding: 1em;
+  box-sizing: border-box;
+  width: 80%;
+  grid-column: 2;
+  grid-row: 1;
+  margin:auto;
+}
+#kommune_info{
+  grid-column: 2;
+  grid-row: 2;
+  padding: 1em;
+  font-weight: bold;
+  margin: auto;
+}
+#kommune_info:empty{
+  padding:0;
+}
+#kommune_detaljer{
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: flex-start;
+  background-color: transparent;
+  justify-content: space-around;
+  border: none;
+}
+#kommune_detaljer div{
+  margin-bottom: 1em;
+  padding: 1em;
+}
+#kommune_detaljer div:first-child{
+  line-height: 2em;
+}
+#kommune_detaljer table{
+  padding: 0px 1em;
+  width: 100%;
+}
+#kommune_detaljer tr:nth-child(even) {
+  background-color: #cccccc;
+}
+#detaljer_knapp{
+    background-color: #677994;
+  display:inline-block;
+  cursor:pointer;
+  padding: 0.5em;
+  color: #eae6e6;
+}
+#detaljer_knapp:hover{
+  background-color: #7a8697;
+}
+
 #sammen {
-display: none;
+  display: none;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+#sammen_form{
+  grid-row: 1;
+  grid-column: 2;
+  padding: 1em;
+  margin: 0em 10%;
+}
+#sammen_form input{
+    padding: 0.5em;
+}
+#sammen_knapp{
+  background-color: #677994;
+  display:inline-block;
+  cursor:pointer;
+  padding: 0.5em;
+  color: #eae6e6;
+}
+#sammen_knapp:hover{
+  background-color: #7a8697;
+}
+
+#sammen_info{
+  grid-row: 2;
+  grid-column: 2;
+  margin: auto;
+}
+#sammen_info table{
+  padding: 2em;
+}
+#sammen_info caption{
+  padding: 1em;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .st-deco{
+    display: none;
+  }
+  html{
+    width: 100%;
+  }
+  img{
+    display: none;
+  }
+  header ul{
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  header ul li{
+    margin: 10px;
+  }
+  .fane{
+    grid-template-columns: auto;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 10px;
+  }
+  #intro_blokk h1 {
+    padding: 0 0 1em 0;
+  }
+  #intro_blokk{
+    display: block;
+  }
+  #wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 70px auto 40px;
+  }
+  #oversikt div{
+    padding: 0.5em;
+    flex-grow: 0;
+    flex-shrink: 3;
+    width: auto;
+    padding: 0.5em;
+  }
+  #oversikt_text{
+    display: block;
+    width: auto;
+  }
+
+
 }
