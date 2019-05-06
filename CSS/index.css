@@ -245,10 +245,14 @@ footer {
     padding: 0;
     margin: 0;
   }
+  header ul li{
+    margin: 10px;
+  }
   .fane{
     grid-template-columns: auto;
     margin: 0.5em;
     padding: 0.5em;
+    font-size: 10px;
   }
   #intro_blokk h1 {
     padding: 0 0 1em 0;
@@ -259,12 +263,19 @@ footer {
   #wrapper {
     min-height: 100%;
     display: grid;
-    grid-template-rows: auto auto 40px;
+    grid-template-rows: 70px auto 40px;
   }
   #oversikt div{
     padding: 0.5em;
     flex-grow: 0;
     flex-shrink: 3;
+    width: auto;
+    padding: 0.5em;
   }
+  #oversikt_text{
+    display: block;
+    width: auto;
+  }
+
 
 }
