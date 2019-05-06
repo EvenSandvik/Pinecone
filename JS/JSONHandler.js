@@ -43,7 +43,6 @@ function Data(fileid) {
 }
 
 // Load all the datasets for use.
-
 let syssel = new Data(100145);
 // add onload by "syssel.onload = function(){...}"
 syssel.load(syssel.fileid, function(input){
